@@ -36,8 +36,8 @@
     }
   },
   "scripts": {
-    //"precompile": ["tscompile.cmd"],
-    "prepublish": ["gulp", "tscompile.cmd", "gulp min"],
+    //"precompile": ["gulp copy-libs"],
+    "prepublish": ["gulp", "tscompile.cmd", "gulp min", "gulp copy-libs"],
     "postpublish": "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
   },
   "tools": {

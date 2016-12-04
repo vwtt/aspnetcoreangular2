@@ -65,3 +65,17 @@ gulp.task("test", function() {
    return gulp.src('tests/*.js')
       .pipe(jasmine());
 });*/
+
+gulp.task('copy-libs',function(){
+  return gulp.src([
+      './node_modules/@angular/**/*.*',
+      './node_modules/angular-in-memory-web-api/**/*.*',
+      './node_modules/core-js/**/*.*',
+      './node_modules/reflect-metadata/**/*.*',
+      './node_modules/rx/**/*.*',
+      './node_modules/rxjs/**/*.*',
+      './node_modules/systemjs/**/*.*',
+      './node_modules/zone.js/**/*.*'
+  ],  {base: './node_modules/'})
+  .pipe(gulp.dest('./wwwroot/lib/'));
+});
