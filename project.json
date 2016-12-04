@@ -4,7 +4,7 @@
     "preserveCompilationContext": true,
     "emitEntryPoint": true,
     "compile": {
-        "exclude": ["node_modules", "wwwroot/node_modules"]
+        "exclude": ["node_modules", "wwwroot/lib"]
     }
   },
   "dependencies": {
